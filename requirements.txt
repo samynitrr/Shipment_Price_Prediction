@@ -1,0 +1,10 @@
+numpy
+Flask
+sklearn
+pandas
+PyYAML
+evidently
+dill
+matplotlib
+plotly
+chart-studio
