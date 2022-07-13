@@ -2,3 +2,5 @@ venv/
 .git
 .gitignore
 .env
+testing/
+logs/

@@ -8,3 +8,4 @@ dill
 matplotlib
 plotly
 chart-studio
+pytest

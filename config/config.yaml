@@ -1,0 +1,11 @@
+training_pipeline:
+  pipeline : shipment
+  artifact_dir : artifact
+
+data_ingestion:
+  dataset_download_url: "https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data/download"
+  zip_data_dir: zip_data
+  raw_data_dir: raw_data
+  ingested_data_dir: ingested_data
+  ingested_train_dir: train
+  ingested_test_dir: test
