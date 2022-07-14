@@ -46,13 +46,15 @@ class GetConfiguration:
                 self.current_time_stamp,
                 DATA_INGESTION_ARTIFACT_DIR
                 )
+            
+            aws = data_ingestion_info[DATA_INGESTION_AWS_KEY]
 
-            data_download_url =  data_ingestion_info[DATA_INGESTION_DATASET_DOWNLOAD_URL_KEY]
+            aws_resource = aws[DATA_INGESTION_AWS_RESOURCE_KEY]
 
-            zip_data_dir = os.path.join(
-                data_artifact_dir,
-                data_ingestion_info[DATA_INGESTION_ZIP_DATA_DIR_KEY]
-                )
+            s3_bucket_name = aws[DATA_INGESTION_S3_BUCKET_NAME]
+
+            aws_file_name =  aws[DATA_INGESTION_AWS_FILE_NAME_KEY]                       
+
             raw_data_dir = os.path.join(
                 data_artifact_dir,
                 data_ingestion_info[DATA_INGESTION_RAW_DATA_DIR_KEY]
@@ -71,8 +73,9 @@ class GetConfiguration:
                 )
 
             data_ingestion_config = DataIngestionConfig(
-                data_download_url= data_download_url,
-                zip_data_dir= zip_data_dir,
+                aws_resource = aws_resource,
+                aws_file_name= aws_file_name,
+                s3_bucket_name=s3_bucket_name,
                 raw_data_dir= raw_data_dir,
                 ingested_data_dir=ingested_data_dir,
                 ingested_train_data_dir= ingested_train_data_dir,

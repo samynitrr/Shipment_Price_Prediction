@@ -30,7 +30,7 @@ class ShipmentException(Exception):
         in function: [{function_name}]
         at try block line number: [{try_block_line_no}]
         and exception block line number:[{exception_block_line_no}]
-        Error message: \n{error_message}
+        Error message: [{error_message}]
         """        
         
         return error_msg

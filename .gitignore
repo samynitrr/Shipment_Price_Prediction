@@ -137,3 +137,8 @@ testing/
 
 # logs
 logs/
+
+#notebook
+notebook/
+
+demo.py

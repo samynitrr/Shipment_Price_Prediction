@@ -6,6 +6,10 @@ PyYAML
 evidently
 dill
 matplotlib
+seaborn
 plotly
 chart-studio
+pymongo[srv]
+boto3
 pytest
+python-dotenv

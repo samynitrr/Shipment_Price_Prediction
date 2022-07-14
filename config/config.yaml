@@ -3,9 +3,21 @@ training_pipeline:
   artifact_dir : artifact
 
 data_ingestion:
-  dataset_download_url: "https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data/download"
-  zip_data_dir: zip_data
+  tgz_data_dir: tgz_data
   raw_data_dir: raw_data
   ingested_data_dir: ingested_data
   ingested_train_dir: train
   ingested_test_dir: test
+  aws:
+    aws_resource: s3
+    s3_bucket_name: shipmentpredictiondata
+    aws_file_name: SCMS_Delivery_History_Dataset.csv 
+  # not used in this project
+  # url:
+  #   download_data_url:
+  # azure:
+  #   azure_resource: blob
+  # gcloud:
+  #   gcloud_resource: cloudstorage
+  
+    
